@@ -31,6 +31,6 @@ Route::get('/6013150004', function () {
     return "Napassorn Zuman NO: 6013150004";
 });
 
-Route::get('/6014110012', function () {
-    return "์Natthamon poungchu NO: 6014110012";
+Route::get('/6014110003', function () {
+    return "Thanapon Maso NO: 6014110003";
 });
