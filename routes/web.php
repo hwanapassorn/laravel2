@@ -34,7 +34,6 @@ Route::get('/6013150004', function () {
 Route::get('/6014110012', function () {
     return "์Natthamon poungchu NO: 6014110012";
 });
-Route::get('/6014110011', function () {
-    return "์Sayamon Rassamee NO: 6014110011";
+Route::get('/6014110026', function () {
+    return "์Nuntawan Chiayapong NO: 6014110026";
 });
-
