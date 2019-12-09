@@ -26,3 +26,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::get('/menu', 'PostsController@mymenu');
+
+Route::get('/6013150004', function () {
+    return "Napassorn Zuman NO: 6013150004";
+});
