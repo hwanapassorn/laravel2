@@ -9,7 +9,8 @@ class Post extends Model
     protected $table = 'posts';
     protected $fillable = [
         'title',
-        'body'
+        'content',
+        'path'
     ];
 
     public function user()
@@ -17,4 +18,3 @@ class Post extends Model
         return $this->belongsTo('App\User');
     }
 }
- 

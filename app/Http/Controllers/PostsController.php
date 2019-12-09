@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\View;
 
+
+use Illuminate\Support\Facades\Input;
 use App\Post;
 use DB;
-
 class PostsController extends Controller
 {
 
@@ -24,7 +25,13 @@ class PostsController extends Controller
 
     public function store(Request $request)
     {
-        Post::create($request->all());
+        $input = $request->all();
+        if($file = $request->file('path')){
+            $name=$file->getClientOriginalName();
+            $file->move('image',$name);
+            $input['path']=$name;
+        }
+        Post::create($input);
         return redirect('/posts');
     }
 
@@ -80,4 +87,13 @@ class PostsController extends Controller
         }
         return view('contact',compact('users'));
     }
+    public function mymenu()
+    {
+        $menu=DB::table('posts')->get();
+        return view('menu',compact('menu'));
+    }
+
+
+
+
 }
